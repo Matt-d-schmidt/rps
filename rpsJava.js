@@ -30,10 +30,10 @@ function playGame() {
         if(hChoice === "rock" && cChoice === "Scissors"){
             console.log( "You win! " + hChoice + " beats " + cChoice);
             humanScore = ++humanScore
-        } else if (hChoice === "paper" && cCHoice === "Rock"){
+        } else if (hChoice === "paper" && cChoice === "Rock"){
             console.log( "You win! " + hChoice + " beats " + cChoice);
             humanScore = ++humanScore
-        } else if (hChoice === "scissors" && cCHoice === "Paper"){
+        } else if (hChoice === "scissors" && cChoice === "Paper"){
             console.log("You win! " + hChoice + " beats " + cChoice);
             humanScore = ++humanScore
         } else if (hChoice === cChoice) {
