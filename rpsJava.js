@@ -51,7 +51,7 @@ function playGame() {
 
         playRound(computerChoise, humanChoice);
     }
-    console.log('Finak Score - YOU: ${humanScore}, COMPUTER: ${computerScore}');
+    console.log('Final Score - YOU: ' + humanScore + ', COMPUTER: ' + computerScore);
 
     if (humanScore > computerScore) {
         console.log("You won the game!");
