@@ -1,15 +1,16 @@
 function getRandomInt(max){
-    return Math.floor(Math.random() * max) + 1;
+    return Math.floor(Math.random() * max);
 }
 
 function getComputerChoice() {
-    let ran = getRandomInt(4);
-    if (ran === 1){
-        return "Rock";
-    } else if (ran === 2) {
-        return "Paper";
-    } else {
-        return "Scissors";
+    let ran = getRandomInt(3);
+    switch(choice) {
+        case 0:
+            return "Rock";
+        case 1:
+            return "Paper";
+        case 2: 
+            return "Scissors"    
     }
 }
 
@@ -24,20 +25,21 @@ function playGame() {
     
     function playRound(computerChoice, humanChoice) {
        let hChoice = humanChoice.toLowerCase();
-       let cChoice = computerChoice.toLowerCase();
+
         if(hChoice === "rock" && cChoice === "Scissors"){
-            return "You win! " + hChoice + " beats " + cChoice;
+            console.log( "You win! " + hChoice + " beats " + cChoice);
             humanScore = ++humanScore
         } else if (hChoice === "paper" && cCHoice === "Rock"){
-            return "You win! " + hChoice + " beats " + cChoice;
+            console.log( "You win! " + hChoice + " beats " + cChoice);
             humanScore = ++humanScore
-        } else if (hChoice === "scissors" && cCHoice === "paper"){
-            return "You win! " + hChoice + " beats " + cChoice;
+        } else if (hChoice === "scissors" && cCHoice === "Paper"){
+            console.log("You win! " + hChoice + " beats " + cChoice);
             humanScore = ++humanScore
         } else if (hChoice === cChoice) {
-            return "It's a tie! you both picked " + hChoice;
+            console.log( "It's a tie! you both picked " + hChoice);
+            return;
         } else {
-            return "You lose! " + hChoice + " beats " + cChoice;
+            console.log( "You lose! " + hChoice + " beats " + cChoice);
             computerScore = ++computerScore
         }
     }
@@ -48,7 +50,15 @@ function playGame() {
 
         playRound(computerChoise, humanChoice);
     }
+    console.log('Finak Score - YOU: ${humanScore}, COMPUTER: ${computerScore}');
 
+    if (humanScore > computerScore) {
+        console.log("You won the game!");
+    } else if (computerScore > humanScore) {
+        console.log("You lost the game.");
+    } else {
+        console.log("The game is a tie.");
+    }
 }
 
 playGame();
