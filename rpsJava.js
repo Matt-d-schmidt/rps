@@ -25,6 +25,7 @@ function playGame() {
     
     function playRound(computerChoice, humanChoice) {
        let hChoice = humanChoice.toLowerCase();
+       let cChoice = computerChoice
 
         if(hChoice === "rock" && cChoice === "Scissors"){
             console.log( "You win! " + hChoice + " beats " + cChoice);
