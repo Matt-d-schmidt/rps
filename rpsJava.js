@@ -4,7 +4,7 @@ function getRandomInt(max){
 
 function getComputerChoice() {
     let ran = getRandomInt(3);
-    switch(choice) {
+    switch(ran) {
         case 0:
             return "Rock";
         case 1:
