@@ -50,3 +50,5 @@ function playGame() {
     }
 
 }
+
+playGame();
