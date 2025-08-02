@@ -46,23 +46,24 @@ function playRound(computerChoice, humanChoice) {
 
 const buttons = document.querySelectorAll('button');
 const results = document.getElementById('result');
+results.style.cssText = 'font-size: 30px; color: black;'
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const computerChoice = getComputerChoice();
         const humanChoice = button.textContent;
         playRound(computerChoice, humanChoice);
-        results.innerHTML = `You chose: ${humanChoice}, <br>Computer chose: ${computerChoice}.<br>
-                     Score - <br>YOU: ${humanScore}, <br>COMPUTER: ${computerScore}`;
+        results.innerHTML = `<span style="font-weight: bold;">You chose:</span> ${humanChoice}, <br><span style="font-weight: bold;">Computer chose:</span> ${computerChoice}.<br>
+                     <span style="font-weight: bold;">Score</span> - <br>YOU: ${humanScore}, <br>COMPUTER: ${computerScore}`;
         if (humanScore === 5) {
-            results.innerHTML += "<br>You win the game!";
+            results.innerHTML += "<br><span style='font-weight: bold;'>You win the game!</span>";
             humanScore = 0;
             computerScore = 0;
         } else if (computerScore === 5) {
-            results.innerHTML += "<br>Computer wins the game!";
+            results.innerHTML += "<br><span style='font-weight: bold;'>Computer wins the game!</span>";
             humanScore = 0;
             computerScore = 0;
         } else {
-            results.innerHTML += "<br>Keep playing!";
+            results.innerHTML += "<br><span style='font-weight: bold;'>Keep playing!</span>";
         }
     });
 });
