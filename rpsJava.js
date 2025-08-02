@@ -51,8 +51,8 @@ buttons.forEach(button => {
         const computerChoice = getComputerChoice();
         const humanChoice = button.textContent;
         playRound(computerChoice, humanChoice);
-        results.textContent = `You chose ${humanChoice}, Computer chose ${computerChoice}. 
-                                 Score - YOU: ${humanScore}, COMPUTER: ${computerScore}`;
+        results.textContent = `You chose ${humanChoice}, \n Computer chose ${computerChoice}.\n
+                                 Score - \n YOU: ${humanScore}, \n COMPUTER: ${computerScore}`;
         if (humanScore === 5) {
             results.textContent += " You win the game!";
             humanScore = 0;
