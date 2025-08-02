@@ -45,6 +45,7 @@ function playRound(computerChoice, humanChoice) {
 }
 
 const buttons = document.querySelectorAll('button');
+const results = document.getElementById('result');
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         const computerChoice = getComputerChoice();
